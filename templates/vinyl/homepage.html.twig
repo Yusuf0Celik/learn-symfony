@@ -1,16 +1,26 @@
 {% extends 'base.html.twig' %}
 {% block title %}Tracks | {{ parent() }}{% endblock %}
 {% block body %}
-<h1> {{ title }} </h1>
+    <nav class="navbar">
+        <ul class="nav navbar">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/browse">Browse</a>
+            </li>
+        </ul>
+    </nav>
+    <h1> {{ title }} </h1>
 
-<div>
-    Tracks:
-    <ul>
-        {% for track in tracks %}
-        <li>
-            {{ track.song }} - {{ track.artist }}
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+    <div class="container-fluid">
+        Tracks:
+        <ul>
+            {% for track in tracks %}
+            <li>
+                {{ track.song }} - {{ track.artist }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
