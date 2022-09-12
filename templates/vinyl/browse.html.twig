@@ -1,6 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <nav class="navbar">
+        <ul class="nav navbar">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/browse">Browse</a>
+            </li>
+        </ul>
+    </nav>
     <div class="container-fluid">
         {{ genre ? genre : 'All Genres' }}
     </div>
